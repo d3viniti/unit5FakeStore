@@ -1,17 +1,13 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
-import Header from './Header'
-import Welcome from './Welcome'
+import Header from './components/Header/Header';
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
-
-
   return (
-    <div>
+    <div className="app-container">
       <Header />
-      Hello React
-      <Welcome username="Anca" color="red"/>
-      <Welcome username="Kristina" />
+      <Homepage />
     </div>
   )
 }

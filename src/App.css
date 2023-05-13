@@ -1,6 +1,16 @@
+/* you can add in google fonts here: 
+@import url('urlGoesHere'); */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-container{
+  background-color: mintcream;
+}
+
+a{
+  text-decoration: none;
 }
