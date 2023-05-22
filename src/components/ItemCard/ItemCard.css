@@ -1,0 +1,10 @@
+.item-card {
+    width: 250px;
+    margin: 10px;
+    background-color: aquamarine;
+    height: auto;
+}
+
+.item-card img{
+    width: 100%;
+}
