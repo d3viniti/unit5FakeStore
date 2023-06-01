@@ -1,0 +1,46 @@
+.details-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14vh auto;
+    padding: 10vh 15vw;
+    width: 70vw;
+    background-color: white;
+}
+
+.text-btn{
+    display: flex;
+    flex-direction: column;
+    /* background-color: azure; */
+}
+
+.details-container img{
+    width: 250px;
+    height: auto;
+    margin-right: 5vw;
+
+}
+
+h3{
+    padding-top: 20px;
+}
+
+/*h how can I fit this text into a 
+certain sized box? */
+.description{
+    /* border: solid pink 1px; */
+    inline-size: 300px;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px;
+    width: 156px;
+    align-self: left;
+    cursor: pointer;
+    border: none;
+    background-color: #FFD814;
+    ;
+}

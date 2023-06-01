@@ -1,0 +1,14 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    background-color: var(--indigo);
+    color: white;
+
+    padding: 10px 10px;
+}
+
+.contact{
+    color: white;
+}

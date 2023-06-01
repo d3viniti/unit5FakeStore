@@ -5,10 +5,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  /* background-color: #FAFAFA; When I set this
+  everything's background turns this color
+  The other style sheets don't override it */
+}
+
+/* how do I make root colors here?  */
+:root{
+  --indigo: #3A4895;
 }
 
 .app-container{
-  background-color: mintcream;
+  
+
 }
 
 a{

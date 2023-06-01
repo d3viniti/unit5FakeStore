@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react'
 import './Homepage.css'
 import axios from 'axios'
 import ItemCard from '../../components/ItemCard/ItemCard'
-
+      
 
 function Homepage() {
 
@@ -36,6 +36,7 @@ function Homepage() {
         //then store this data in state after you create state
         setItems(res.data)
         //input the data above that you confirmed is correct
+        //how do I map this into an 'All Products' button?
       }
 
       )
@@ -46,9 +47,21 @@ function Homepage() {
     },[]//empty array means one run time when page loads
   )
 
+  function displayAllProducts(){
+    axios.get(`https://fakestoreapi.com/products`)
+    .then(res=>{
+      console.log(res.data)
+      setItems(res.data)
+    }
+
+    )
+    .catch(err=>console.log(err))
+  }
+
   return (
     <div className='homepage-container'>
       <div className='cat-container'>
+        <p onClick={displayAllProducts}>All Products</p>
         {
           //need to set a unique key for each category
         categories.map(item=><p key={item} onClick={()=>filterCat({item})}>{item.charAt(0).toUpperCase()

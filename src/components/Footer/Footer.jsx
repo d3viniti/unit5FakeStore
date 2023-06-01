@@ -4,8 +4,8 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='footer-container'>
-        <img href="#"></img>
-        <a href="/contactUs">Contact Us</a>
+        <p>Made with ♥ by Kristina </p>
+        <a href="/contactUs" className="contact">Contact Us</a>
     </div>
   )
 }

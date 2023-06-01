@@ -2,11 +2,32 @@
     min-height: 100vh;
     text-align: center;
     padding: 30px 10px;
+    background-color: #FAFAFA;
+}
 
+.cat-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    width: 70%;
+    cursor: pointer;
+    
+    color: var(--indigo);
 }
 
 .items-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 10px 0 0 0;
+}
+
+/* ------------- Mobile ----------------- */
+@media screen and (max-device-width: 480px){
+    .cat-container{
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
 }

@@ -2,11 +2,19 @@ import React from 'react'
 import './ItemCard.css'
 
 function ItemCard({item}) {
+
+function seeDetails(){
+  console.log("appear details page! Voila!")
+}
+
   return (
-    <div className='item-card'>
+    <div onClick={()=>seeDetails} className='item-card'>
         <img src={item?.image} />
-        <p>{item?.title}</p>
-        <a href="#">See Details</a>
+        <div className="item-card-text">
+          <p className="title">{item?.title}</p>
+          <p className="price, white">{item?.price + '€'}</p>
+          <a href={`/details/${item?.id}`} className="open-details">See Details</a>
+        </div>
     </div>
   )
 }

@@ -1,0 +1,44 @@
+
+
+.contactpage-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height:90vh;
+   /* margin: 10vh auto 19vh auto; */
+   background-color: #FAFAFA;
+}
+
+.contact-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5vh 4vw 25vh 4vw;
+}
+
+.contact-elements > *{
+    padding-left: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+}
+/* this selects all children of parent */
+
+.contact-elements input, textarea{
+    background-color: #B4B4B4;
+}
+
+.contact-elements input::placeholder, textarea::placeholder{
+    color: #FAFAFA;
+}
+
+.contact-elements button{
+    background-color: #5264C3;
+    color: white;
+
+    padding: 10px 30px;
+}

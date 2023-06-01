@@ -5,6 +5,7 @@
     justify-content: space-between;
     height: 60px;
     padding: 0 5vw 0 5vw;
+    background-color: #FAFAFA;
 }
 
 .header-container a{
