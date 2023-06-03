@@ -1,7 +1,7 @@
 import {useState, createContext, useEffect} from 'react'
-import { CartContext } from './CartContext';
+// import { CartContext } from './CartContext';
 //creat the context
-export const CartContext = createContext()
+export const CartContext = createContext();
 
 export default function CartContextProvider(props){
     //create state to hold items in cart

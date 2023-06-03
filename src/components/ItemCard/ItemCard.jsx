@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ItemCard.css'
 import { Link } from 'react-router-dom'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import { CartContext } from '../../contexts/CartContext/CartContext';
 
 function ItemCard({item}) {
   //create variable for hearts
-  const inCart = true;
+  const inCart = false;
+  //use context for global state
+  //NOTE: use { } NOT []
+  const {cartItems} = useContext(CartContext);
+
 
 function seeDetails(){
   console.log("appear details page! Voila!")
