@@ -9,7 +9,15 @@ function Header() {
     <div className="header-container">
         <Link to="/">Fake Store</Link>
          {/* What hfref will i use for above a tag considering I'm using react components? */}
-        <IoCartOutline className="cart-icon"/>
+        <Link to='/checkout'>
+        <IoCartOutline className="cart-icon"></IoCartOutline> 
+        </Link>
+        {/* if cart.length > 0 then button should display cart.length 
+        else, the button should not display a number 
+        cart.length > 0
+        "cart.length"
+        :
+        display just cart icon*/}
     </div>
   )
 }

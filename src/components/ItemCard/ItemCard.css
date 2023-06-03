@@ -9,6 +9,7 @@
     align-items: center;
     text-align: left;
     border-radius: 8px;
+    position: relative;
 }
 
 .item-card img{
@@ -23,6 +24,15 @@
     background-color: #FFFFFF;
     font-size: 1em;
     padding: 5px 10px;
+}
+
+.heart-icon{
+    color: #5264C3;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+    cursor: pointer;
 }
 
 .white{
