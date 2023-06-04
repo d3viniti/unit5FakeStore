@@ -12,7 +12,7 @@
     position: relative;
 }
 
-.item-card img{
+.product-card img{
     width: 60%;
     border: 1px solid #efefef;
     padding: 10px;
@@ -20,7 +20,7 @@
     border-radius: 8px;
 }
 
-.item-card-text p{
+.product-card-text p{
     background-color: #FFFFFF;
     font-size: 1em;
     padding: 5px 10px;
@@ -39,7 +39,7 @@
     background-color: #FFFFFF;
 }
 
-.item-card-text .price{
+.product-card-text .price{
     background-color: #FFFFFF;
     font-weight: 600;
     padding: 0 10px;
@@ -57,7 +57,7 @@
 
 
 @media screen and (max-device-width: 480px){
-    .item-card{
+    .product-card{
         width: 40vw
     }
 
