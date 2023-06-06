@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import './CartItem.css' ;
-import { CartContext } from '../../contexts/CartContext/CartContext';
-// import { FaRegTrashCan } from "react-icons/fa6";
+import { BsTrash } from "react-icons/bs";
+
 
 export default function CartItem({product}) {
-    const [inCart, setInCart] = React.useState(false);
-    const {cartItems, addProduct, removeProduct} = useContext(CartContext);
+   
     
     // React.useEffect(
     //     ()=>{
@@ -21,7 +20,7 @@ export default function CartItem({product}) {
             <p className='title'>{product?.title}</p>
             <p className='price'>{product?.price + '€'}</p>
             <p className='quantity'>1</p>
-            <p>TrashcanIcon</p>
+            {<BsTrash/>}
         </div>
     </div>
   )

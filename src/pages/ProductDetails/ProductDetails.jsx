@@ -10,8 +10,11 @@ function ProductDetails() {
     //The Id is in the url - how do we get it out of the url?
     //we use hook useParams - must import it
     const {productId} = useParams()
-    const [inCart] = React.useState(false);
-    const {addProduct, removeProduct} = useContext(CartContext);
+    console.log("datatype", typeof(productId))
+    //below creating state for whether this item is in cart
+    const [inCart, setInCart] = React.useState(false);
+    //accessing global state
+    const {addProduct, removeProduct, cartItems} = useContext(CartContext);
     
     //create state to hold product data
     const [product, setProduct] = React.useState('')
@@ -35,6 +38,15 @@ function ProductDetails() {
     )
 
 
+  // we need a useEffect that is triggered by any change in inCart
+  React.useEffect(
+    ()=>{
+      //is this product already inCart?
+      setInCart(cartItems.find(item=>item.id==productId))
+    }, [cartItems]
+  )
+
+
   return (
     <div className="details-container">
         <img src={product?.image} />
@@ -44,7 +56,7 @@ function ProductDetails() {
             <p className='description'>{product?.description}</p>
             {
                 inCart?
-                <button onClick={()=>removeProduct(product)}>Remove from Cart</button>
+                <button onClick={()=>removeProduct(product?.id)} >Remove from Cart</button>
                 :
                 <button onClick={()=>addProduct(product)}>Add to Cart</button>  
                 //once item is in cart, it doesn't show 'remove from cart' and

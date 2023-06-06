@@ -18,6 +18,8 @@ function ProductCard({product}) {
   React.useEffect(
     ()=>{
       //is this product already inCart?
+      //.find() returns a boolean value true if it finds it or false 
+      //
       setInCart(cartItems.find(item=>item.id===product.id))
     }, [cartItems]
   )
