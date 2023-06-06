@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useParams} from 'react-router-dom'
 import './ProductDetails.css'
 import axios from 'axios'
+import { CartContext } from '../../contexts/CartContext/CartContext'
 
 function ProductDetails() {
     //This page shows the details for a specific product
@@ -9,7 +10,8 @@ function ProductDetails() {
     //The Id is in the url - how do we get it out of the url?
     //we use hook useParams - must import it
     const {productId} = useParams()
-    
+    const [inCart] = React.useState(false);
+    const {addProduct, removeProduct} = useContext(CartContext);
     
     //create state to hold product data
     const [product, setProduct] = React.useState('')
@@ -40,7 +42,14 @@ function ProductDetails() {
             <h2>{product?.title}</h2>
             <h3>{product?.price + '€'}</h3>
             <p className='description'>{product?.description}</p>
-            <button>Add To Cart</button>
+            {
+                inCart?
+                <button onClick={()=>removeProduct(product)}>Remove from Cart</button>
+                :
+                <button onClick={()=>addProduct(product)}>Add to Cart</button>  
+                //once item is in cart, it doesn't show 'remove from cart' and
+                //its functionality doesn't work either 
+            }
         </div>
     </div>
   )

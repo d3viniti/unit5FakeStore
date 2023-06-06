@@ -1,0 +1,17 @@
+.cart-item-container{
+    background-color: pink;
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 10vw;
+
+}
+
+p{
+    max-width: 20vw;
+}

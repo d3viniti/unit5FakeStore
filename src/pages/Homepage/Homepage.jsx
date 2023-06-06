@@ -2,7 +2,7 @@ import React from 'react'
 import {useEffect, useState} from 'react'
 import './Homepage.css'
 import axios from 'axios'
-import ItemCard from '../../components/ItemCard/ItemCard'
+import ProductCard from '../../components/ProductCard/ProductCard'
       
 
 function Homepage() {
@@ -68,12 +68,12 @@ function Homepage() {
           + item.slice(1)}</p>)
         }
       </div>
-      <div className='items-container'>
+      <div className='products-container'>
         {//add the unique key to make .map happy
-          items.map(product=><ItemCard 
+          items.map(product=><ProductCard 
             key={product.id}
-            //below prop is what goes in curly brace of ItemCard()
-            item={product} />)
+            //below prop is what goes in curly brace of ProductCard()
+            product={product} />)
         }
       </div>
     </div>

@@ -1,4 +1,4 @@
-.item-card {
+.product-card {
     width: 20vw;
     margin: 10px;
     background-color: #FFFFFF;
@@ -10,6 +10,7 @@
     text-align: left;
     border-radius: 8px;
     position: relative;
+    background-color: midnightblue;
 }
 
 .product-card img{
@@ -30,7 +31,7 @@
     color: #5264C3;
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: 6px;
 
     cursor: pointer;
 }
