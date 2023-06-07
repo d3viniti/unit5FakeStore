@@ -14,14 +14,17 @@
     margin: 0 auto;
 }
 
-.cart-items{
+.cart-items-container{
     display: flex;
-    flex: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    
+    width: 70vw;
+    margin: 0 auto;
+    background-color: aqua;
 }
 
 .cart-items > *{
     border: 1px solid purple;
+    /* how can I make these items stretch to fit the length of the parent? */
    
 }

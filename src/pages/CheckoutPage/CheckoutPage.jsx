@@ -18,6 +18,7 @@ function CheckoutPage() {
       <p>Quantity</p>
       <p>Remove</p>
     </div>
+    <div className="cart-items-container">
       <div className="cart-items">
         {
           cartItems.length > 0 ?
@@ -27,7 +28,9 @@ function CheckoutPage() {
                           :
                           <p>No Items in Cart</p>
         }
+        </div>
       </div>
+      <button >Checkout</button>
     </div>
   )
 }

@@ -5,6 +5,7 @@
 .cart-item{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 img{
@@ -14,4 +15,8 @@ img{
 
 p{
     max-width: 20vw;
+}
+
+.trash-icon{
+    cursor: pointer;
 }

@@ -14,6 +14,23 @@
    
 }
 
+.cart-icon-container{
+    position: relative;
+}
+
 .cart-icon{
-    font-size: 1.25em;
+    font-size: 1.5em;
+    
+}
+
+.cart-length{
+    position: absolute;
+    font-size: .5em;
+    right: 9px;
+    top: 0px;
+
+    background-color: red;
+    color: white;
+    padding: 0.25em;
+    border-radius: 50%;
 }

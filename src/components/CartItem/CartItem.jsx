@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import './CartItem.css' ;
 import { BsTrash } from "react-icons/bs";
+import { CartContext } from '../../contexts/CartContext/CartContext';
 
 
 export default function CartItem({product}) {
    
+    const {addProduct, removeProduct, cartItems} = useContext(CartContext);
     
     // React.useEffect(
     //     ()=>{
@@ -15,13 +17,11 @@ export default function CartItem({product}) {
 
     return (
     <div className='cart-item'>
-        <div className='cart-item'>
             <img src={product?.image}/>
             <p className='title'>{product?.title}</p>
             <p className='price'>{product?.price + '€'}</p>
             <p className='quantity'>1</p>
-            {<BsTrash/>}
-        </div>
+            {<BsTrash className="trash-icon" onClick={()=>removeProduct(product.id)}/>}
     </div>
   )
 }
