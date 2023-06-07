@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import './CheckoutPage.css'
 import { CartContext } from '../../contexts/CartContext/CartContext';
 import CartItem from '../../components/CartItem/CartItem';
@@ -10,13 +10,47 @@ function CheckoutPage() {
    //we need to access the global context
   //NOTE: use { } NOT []
   const {cartItems} = useContext(CartContext);
+
+  //create state for for cart total
+  //assign it to useEffect
+  const [cartTotal, setCartTotal] = useState([])
+    
+
+  useEffect(
+    //total needs to be calculated every time theres is a change in CartTotal
+    ()=>{
+      let total = 0;
+      for(let i=0; i < cartItems.length; i++){
+        total += cartItems[i].price;
+      }
+      console.log(total);
+      setCartTotal(total);
+    }, [] //initialize total when page loads
+  )
+
+  useEffect(
+    //total needs to be calculated every time theres is a change in CartTotal
+    ()=>{
+      let total = 0;
+      for(let i=0; i < cartItems.length; i++){
+        total += cartItems[i].price;
+      }
+      console.log(total);
+      setCartTotal(total);
+    }, [cartItems] //initialize total when there is a change in CartItems
+  )
+
   return (
     <div className="cart-container">
     <div className="cart-headings">
-      <p>Item</p>
-      <p>Price</p>
-      <p>Quantity</p>
-      <p>Remove</p>
+      <div className='item-heading'>
+        <p>Item</p>
+      </div>
+      <div className='price-quant-remove'>
+        <p>Price</p>
+        <p>Quantity</p>
+        <p>Remove</p>
+      </div>
     </div>
     <div className="cart-items-container">
       <div className="cart-items">
@@ -30,6 +64,7 @@ function CheckoutPage() {
         }
         </div>
       </div>
+      <p>Total {cartTotal}€</p>
       <button >Checkout</button>
     </div>
   )

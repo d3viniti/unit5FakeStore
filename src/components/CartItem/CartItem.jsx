@@ -17,11 +17,15 @@ export default function CartItem({product}) {
 
     return (
     <div className='cart-item'>
+          <div className="img-title">
             <img src={product?.image}/>
             <p className='title'>{product?.title}</p>
+          </div> 
+          <div className="price-quant-remove-data">
             <p className='price'>{product?.price + '€'}</p>
             <p className='quantity'>1</p>
             {<BsTrash className="trash-icon" onClick={()=>removeProduct(product.id)}/>}
+          </div> 
     </div>
   )
 }

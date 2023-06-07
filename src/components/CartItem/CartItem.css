@@ -1,10 +1,26 @@
 .cart-item-container{
-    background-color: pink;
+    background-color: lavender;
 }
 
 .cart-item{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 60vw;
+}
+
+.img-title{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.price-quant-remove-data{
+    display: flex;
+    width: 50%;
     justify-content: space-between;
 }
 
@@ -19,4 +35,5 @@ p{
 
 .trash-icon{
     cursor: pointer;
+    font-size: 1.75em;
 }
