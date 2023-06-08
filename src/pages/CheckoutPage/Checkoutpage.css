@@ -37,3 +37,10 @@
     /* how can I make these items stretch to fit the length of the parent? */
    
 }
+
+
+.Modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

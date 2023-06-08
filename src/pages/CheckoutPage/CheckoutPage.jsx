@@ -2,6 +2,8 @@ import React, {useContext, useState, useEffect} from 'react'
 import './CheckoutPage.css'
 import { CartContext } from '../../contexts/CartContext/CartContext';
 import CartItem from '../../components/CartItem/CartItem';
+import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 
 function CheckoutPage() {
@@ -15,6 +17,25 @@ function CheckoutPage() {
   //assign it to useEffect
   const [cartTotal, setCartTotal] = useState([])
     
+
+  //create state to control modal
+  const [isOpen, setIsOpen] = useState(false)
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '50vw',
+      height: '60vh'
+    },
+  };
+
+  // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement(document.getElementById('root'));
 
   useEffect(
     //total needs to be calculated every time theres is a change in CartTotal
@@ -65,7 +86,27 @@ function CheckoutPage() {
         </div>
       </div>
       <p>Total {cartTotal}€</p>
-      <button >Checkout</button>
+      <button 
+      onClick={()=>setIsOpen(true)}>Checkout</button>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={()=>setIsOpen(false)}
+        style={customStyles}
+        contentLabel="Order Successful!"
+      >
+        {/* <button onClick={closeModal}>close</button> */}
+        <p>
+        Your Order was successful!
+
+
+
+Check your email for the order confirmation. Thank you for shopping with Fake Store!
+        </p>
+          <Link to='/'>
+          <button className='home-btn'>Return to Main Screen</button>
+          {/* need to Link this button and route to home */}
+          </Link>
+      </Modal>
     </div>
   )
 }
