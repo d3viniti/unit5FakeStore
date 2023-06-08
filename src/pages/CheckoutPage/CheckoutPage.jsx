@@ -95,17 +95,18 @@ Modal.setAppElement(document.getElementById('root'));
         contentLabel="Order Successful!"
       >
         {/* <button onClick={closeModal}>close</button> */}
-        <p>
-        Your Order was successful!
+        <div className="modal-content">
+          <p>
+          Your Order was successful!
 
 
 
 Check your email for the order confirmation. Thank you for shopping with Fake Store!
-        </p>
+          </p>
           <Link to='/'>
-          <button className='home-btn'>Return to Main Screen</button>
-          {/* need to Link this button and route to home */}
+            <button className='home-btn'>Return to Main Screen</button>
           </Link>
+        </div>
       </Modal>
     </div>
   )
