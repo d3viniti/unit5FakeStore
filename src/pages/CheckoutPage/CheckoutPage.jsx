@@ -104,6 +104,7 @@ Modal.setAppElement(document.getElementById('root'));
 Check your email for the order confirmation. Thank you for shopping with Fake Store!
           </p>
           <Link to='/'>
+            I need to create an onClick function that will delete the items in local storage/
             <button className='home-btn'>Return to Main Screen</button>
           </Link>
         </div>
